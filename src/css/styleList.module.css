@@ -1,0 +1,122 @@
+body {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  outline: none;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+.toDoListBox {
+  max-width: 500px;
+  margin: 0 auto;
+  margin-top: 4rem;
+  text-align: center;
+  color: white;
+  border: 1px solid rgba(150, 150, 150, 0.5);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+.toDoListBox .titleBox {
+  position: relative;
+  background-color: #22b8cf;
+  height: 6rem;
+  margin-top: -2rem;
+}
+.toDoListBox .titleBox h2 {
+  position: relative;
+  top: 50%;
+  transform: translate(0, -50%);
+  font-size: 2.5rem;
+  font-weight: 100;
+}
+.toDoListBox .inputBox {
+  padding: 1rem;
+  border-bottom: 1px solid #22b8cf;
+}
+.toDoListBox .inputBox form {
+  display: flex;
+}
+.toDoListBox .inputBox form input[type="text"] {
+  flex: 1;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #c5f6fa;
+  font-size: 1.25rem;
+}
+.toDoListBox .inputBox form input[type="text"]:focus {
+  outline: none;
+}
+.toDoListBox .inputBox form input[type="submit"] {
+  border: none;
+  background: #22b8cf;
+  padding: 0.5rem 1rem;
+  margin-left: 1rem;
+  border-radius: 3px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+.toDoListBox .inputBox form input[type="submit"]:hover {
+  background: #3bc9db;
+}
+.toDoBox {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.15s;
+  min-height: 5rem;
+}
+.toDoBox + .toDoBox {
+  border-top: 1px solid #f1f3f5;
+}
+button {
+  background: none;
+  font-size: 1.5rem;
+  font-weight: 600;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+.toDoBox:hover {
+  background: #e4fafc;
+}
+.toDoBox:hover .del {
+  opacity: 1;
+}
+.del {
+  margin-right: 1rem;
+  opacity: 0;
+  color: #e64980;
+}
+.check {
+  color: #3bc9db;
+}
+.toDoBox div {
+  flex: 1;
+  text-align: left;
+}
+.toDoBox span {
+  position: relative;
+  word-break: break-all;
+  color: black;
+}
+.toDoBox .checking {
+  color: gray;
+}
+.toDoBox .checking::after {
+  position: absolute;
+  top: 50%;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: gray;
+}
